@@ -1,0 +1,66 @@
+employees.json
+
+{
+    "employees": [
+        {
+            "Name": "Gaurav Dhote",
+            "DOB": "1997-05-23",
+            "Height": 200,
+            "City": "Wardha",
+            "State": "Maharashtra"
+        },
+                {
+            "Name": "Rahul Vaidya",
+            "DOB": "1997-05-27",
+            "Height": 195,
+            "City": "Wardha",
+            "State": "Maharashtra"
+        },
+                {
+            "Name": "Gaurav Dhote",
+            "DOB": "1997-05-23",
+            "Height": 200,
+            "City": "Wardha",
+            "State": "Maharashtra"
+        },
+                {
+            "Name": "Gaurav Dhote",
+            "DOB": "1997-05-23",
+            "Height": 200,
+            "City": "Wardha",
+            "State": "Maharashtra"
+        },
+                {
+            "Name": "Gaurav Dhote",
+            "DOB": "1997-05-23",
+            "Height": 200,
+            "City": "Wardha",
+            "State": "Maharashtra"
+        }
+    ]
+}
+
+
+Employee.py
+
+import json
+
+class Employee:
+    def __init__(self, name, dob, height, city, state):
+        self.name = name
+        self.dob = dob
+        self.height = height
+        self.city = city
+        self.state = state
+    
+    def __str__(self):
+        return f"{self.name}, born on {self.dob}, {self.height}cm, from {self.city}, {self.state}"
+
+with open("employee.json", "r") as f:
+    data = json.load(f)
+    emps = []
+    for emp in data["employees"]:
+        emps.append(Employee(emp["Name"], emp["DOB"], emp["Height"], emp["City"], emp["State"]))
+
+for e in emps:
+    print(emp)
