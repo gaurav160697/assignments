@@ -1,0 +1,52 @@
+Dog.py
+
+class Dog:
+    def __init__(self, name, age, coat_color):
+        self.name = name
+        self.age = age
+        self.coat_color = coat_color
+    
+    def description(self):
+        print(f"{self.name} is {self.age} years old.")
+    
+    def get_info(self):
+        print(f"{self.name}'s coat color is {self.coat_color}.")
+
+class JackRussellTerrier(Dog):
+    def bark(self):
+        print("Woof! Woof!")
+    
+    def hunt(self):
+        print(f"{self.name} is hunting.")
+
+class Bulldog(Dog):
+    def snore(self):
+        print(f"{self.name} is snoring.")
+    
+    def guard(self):
+        print(f"{self.name} is guarding the house.")
+
+
+
+Object,py
+
+
+from Dog import Bulldog, Dog, JackRussellTerrier
+
+
+my_dog = Dog("Jerry", 3, "WhiteBlack")
+my_dog.description()
+my_dog.get_info()
+
+my_jrt = JackRussellTerrier("Jemish", 2, "Gray")
+my_jrt.description()
+my_jrt.get_info()
+my_jrt.bark()
+my_jrt.hunt()
+
+my_bulldog = Bulldog("Marky", 5, "Golden")
+
+my_bulldog.description()
+my_bulldog.get_info()
+my_bulldog.snore()
+my_bulldog.guard()
