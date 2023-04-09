@@ -1,0 +1,14 @@
+import json
+
+states = {
+    "Maharashtra": "Amaravati",
+    "Uttar Pradesh": "Bareli",
+    "Assam": "Guwhati",
+    "Gujarat": "Gandhinagar",
+    "Karnataka": "Bengaluru",
+    "Chattisgad": "Raipur",
+    "Kerala": "kocchi"
+}
+
+with open("states.json", "w") as f:
+    json.dump(states, f)
